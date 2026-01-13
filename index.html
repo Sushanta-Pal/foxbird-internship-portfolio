@@ -1,20 +1,73 @@
-<style>
-:root {
-  --bg: #0a0e27;
-  --text: #ffffff;
-  --accent: #00d9ff;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modular Portfolio</title>
+  
+  <!-- === Global Styles & Dark/Light Mode Variables === -->
+  <style>
+    :root {
+      --bg: #0a0e27;
+      --text: #ffffff;
+      --accent: #00d9ff;
+    }
 
-body.light {
-  --bg: #ffffff;
-  --text: #111111;
-}
+    body.light {
+      --bg: #ffffff;
+      --text: #111111;
+    }
 
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: Arial, sans-serif;
-  transition: background 0.3s, color 0.3s;
-}
-</style>
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    #navbar {
+      padding: 16px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10,14,39,0.9);
+    }
+
+    button {
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+    }
+
+    main#content {
+      padding: 40px 10%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- === Navbar Module Placeholder === -->
+  <div id="navbar"></div>
+
+  <!-- === Main Content Placeholder === -->
+  <main id="content"></main>
+
+  <!-- === JS Modules === -->
+  <script src="router.js"></script>
+  <script src="loader.js"></script>
+  <script src="theme.js"></script>
+  <script src="animations.js"></script>
+</body>
+</html>
